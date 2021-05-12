@@ -21,6 +21,10 @@ var marsShipped    {months, types} >= 0; # unidades de marmelada enviada para ma
 var produced {months, types} >= 0;
 var leftOver {months, types} >= 0;
 
+var mercuryShuttle {months} binary;
+var venusShuttle   {months} binary;
+var marsShuttle    {months} binary;
+
 ### CONSTRAINTS ###
 
 subject to mercuryMaxAmountShipped {m in months}: sum {t in types} mercuryShipped[m, t] <= 1000; # só podem ser enviadas até 1000 unidades de marmelada para mercúrio
@@ -30,12 +34,17 @@ subject to marsMaxAmountShipped    {m in months}: sum {t in types} marsShipped[m
 subject to productionLinesMaxCapacity {m in months, p in productionLines}: sum {t in types} 
 produced[m, t] / productionLinesCapacity[p, t] <= 1;
 
+subject to r1 {m in months}: sum {t in types} mercuryShipped [m, t] <= 1000 * mercuryShuttle[m];
+subject to r2 {m in months}: sum {t in types} venusShipped [m, t] <= 1000 * venusShuttle[m];
+subject to r3 {m in months}: sum {t in types} marsShipped [m, t] <= 1000 * marsShuttle[m];
+
 subject to firstMonthProduction   {t in types}: produced[1, t] = mercuryShipped[1, t] + venusShipped[1, t] + marsShipped[1, t] + leftOver[1, t];
 subject to generalMonthProduction {m in 2 .. 12, t in types}: produced[m, t] = mercuryShipped[m, t] + venusShipped[m, t] + marsShipped[m, t] + leftOver[m, t] - leftOver[m - 1, t];  
 
 ### OBJECTIVE ###
 
-maximize revenue: sum {m in months} sum {t in types} 
-( mercuryShipped[m, t]*mercuryPrices[m, t] + venusShipped[m, t]*venusPrices[m, t] + marsShipped[m, t]*marsPrices[m, t] - leftOver[m, t] - 10000);
+maximize revenue: 
+sum {m in months} sum {t in types} ( mercuryShipped[m, t]*mercuryPrices[m, t] + venusShipped[m, t]*venusPrices[m, t] + marsShipped[m, t]*marsPrices[m, t] - leftOver[m, t]) 
+- sum {m in months} (mercuryShuttle[m] * 10000 + venusShuttle[m] * 10000 + marsShuttle[m] * 10000);
 
 end;
