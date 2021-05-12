@@ -21,9 +21,9 @@ var marsShipped    {months, types} >= 0; # unidades de marmelada enviada para ma
 var produced {months, types} >= 0;
 var leftOver {months, types} >= 0;
 
-var mercuryShuttle {months} binary;
-var venusShuttle   {months} binary;
-var marsShuttle    {months} binary;
+var mercuryShuttle {months} binary; # variável que define se há envio para mercúrio 
+var venusShuttle   {months} binary; # variável que define se há envio para vénus
+var marsShuttle    {months} binary; # variável que define se há envio para marte
 
 var mercurySold {months, types} >= 0;
 var venusSold {months, types} >= 0;
