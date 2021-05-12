@@ -14,12 +14,12 @@ param productionLinesCapacity {productionLines, types} >= 0; # capacidade máxim
 
 ### VARIABLES ###
 
-var mercuryShipped {months, types} >= 0 integer; # unidades de marmelada enviada para mercúrio 
-var venusShipped   {months, types} >= 0 integer; # unidades de marmedada enviada para vénus
-var marsShipped    {months, types} >= 0 integer; # unidades de marmelada enviada para marte
+var mercuryShipped {months, types} >= 0; # unidades de marmelada enviada para mercúrio 
+var venusShipped   {months, types} >= 0; # unidades de marmedada enviada para vénus
+var marsShipped    {months, types} >= 0; # unidades de marmelada enviada para marte
 
-var produced {months, types} >= 0 integer;
-var leftOver {months, types} >= 0 integer;
+var produced {months, types} >= 0;
+var leftOver {months, types} >= 0;
 
 ### CONSTRAINTS ###
 
