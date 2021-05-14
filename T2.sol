@@ -151,42 +151,78 @@ Objective:  revenue = 626028.5714 (MAXimum)
                             0.833333                           1 
     72 productionLinesMaxCapacity[12,Packing]
                                  0.5                           1 
-    73 r1[1]                       0                          -0 
-    74 r1[2]                       0                          -0 
-    75 r1[3]                       0                          -0 
-    76 r1[4]                       0                          -0 
-    77 r1[5]                       0                          -0 
-    78 r1[6]                       0                          -0 
-    79 r1[7]                       0                          -0 
-    80 r1[8]                       0                          -0 
-    81 r1[9]                       0                          -0 
-    82 r1[10]                      0                          -0 
-    83 r1[11]                      0                          -0 
-    84 r1[12]                      0                          -0 
-    85 r2[1]                       0                          -0 
-    86 r2[2]                       0                          -0 
-    87 r2[3]                       0                          -0 
-    88 r2[4]                       0                          -0 
-    89 r2[5]                       0                          -0 
-    90 r2[6]                       0                          -0 
-    91 r2[7]                       0                          -0 
-    92 r2[8]                       0                          -0 
-    93 r2[9]                       0                          -0 
-    94 r2[10]                      0                          -0 
-    95 r2[11]                      0                          -0 
-    96 r2[12]                      0                          -0 
-    97 r3[1]                       0                          -0 
-    98 r3[2]                       0                          -0 
-    99 r3[3]                       0                          -0 
-   100 r3[4]                       0                          -0 
-   101 r3[5]                       0                          -0 
-   102 r3[6]                       0                          -0 
-   103 r3[7]                    -400                          -0 
-   104 r3[8]                       0                          -0 
-   105 r3[9]                    -150                          -0 
-   106 r3[10]                   -150                          -0 
-   107 r3[11]                      0                          -0 
-   108 r3[12]                      0                          -0 
+    73 mercuryShuttleRestriction[1]
+                                   0                          -0 
+    74 mercuryShuttleRestriction[2]
+                                   0                          -0 
+    75 mercuryShuttleRestriction[3]
+                                   0                          -0 
+    76 mercuryShuttleRestriction[4]
+                                   0                          -0 
+    77 mercuryShuttleRestriction[5]
+                                   0                          -0 
+    78 mercuryShuttleRestriction[6]
+                                   0                          -0 
+    79 mercuryShuttleRestriction[7]
+                                   0                          -0 
+    80 mercuryShuttleRestriction[8]
+                                   0                          -0 
+    81 mercuryShuttleRestriction[9]
+                                   0                          -0 
+    82 mercuryShuttleRestriction[10]
+                                   0                          -0 
+    83 mercuryShuttleRestriction[11]
+                                   0                          -0 
+    84 mercuryShuttleRestriction[12]
+                                   0                          -0 
+    85 venusShuttleRestriction[1]
+                                   0                          -0 
+    86 venusShuttleRestriction[2]
+                                   0                          -0 
+    87 venusShuttleRestriction[3]
+                                   0                          -0 
+    88 venusShuttleRestriction[4]
+                                   0                          -0 
+    89 venusShuttleRestriction[5]
+                                   0                          -0 
+    90 venusShuttleRestriction[6]
+                                   0                          -0 
+    91 venusShuttleRestriction[7]
+                                   0                          -0 
+    92 venusShuttleRestriction[8]
+                                   0                          -0 
+    93 venusShuttleRestriction[9]
+                                   0                          -0 
+    94 venusShuttleRestriction[10]
+                                   0                          -0 
+    95 venusShuttleRestriction[11]
+                                   0                          -0 
+    96 venusShuttleRestriction[12]
+                                   0                          -0 
+    97 marsShuttleRestriction[1]
+                                   0                          -0 
+    98 marsShuttleRestriction[2]
+                                   0                          -0 
+    99 marsShuttleRestriction[3]
+                                   0                          -0 
+   100 marsShuttleRestriction[4]
+                                   0                          -0 
+   101 marsShuttleRestriction[5]
+                                   0                          -0 
+   102 marsShuttleRestriction[6]
+                                   0                          -0 
+   103 marsShuttleRestriction[7]
+                                -400                          -0 
+   104 marsShuttleRestriction[8]
+                                   0                          -0 
+   105 marsShuttleRestriction[9]
+                                -150                          -0 
+   106 marsShuttleRestriction[10]
+                                -150                          -0 
+   107 marsShuttleRestriction[11]
+                                   0                          -0 
+   108 marsShuttleRestriction[12]
+                                   0                          -0 
    109 firstMonthProduction[R]
                                    0            -0             = 
    110 firstMonthProduction[C]

@@ -42,9 +42,9 @@ subject to marsMaxAmountShipped    {m in months}: sum {t in types} marsShipped[m
 subject to productionLinesMaxCapacity {m in months, p in productionLines}: sum {t in types} 
 produced[m, t] / productionLinesCapacity[p, t] <= 1;
 
-subject to r1 {m in months}: sum {t in types} mercuryShipped [m, t] <= 1000 * mercuryShuttle[m];
-subject to r2 {m in months}: sum {t in types} venusShipped [m, t] <= 1000 * venusShuttle[m];
-subject to r3 {m in months}: sum {t in types} marsShipped [m, t] <= 1000 * marsShuttle[m];
+subject to mercuryShuttleRestriction {m in months}: sum {t in types} mercuryShipped [m, t] <= 1000 * mercuryShuttle[m];
+subject to venusShuttleRestriction {m in months}: sum {t in types} venusShipped [m, t] <= 1000 * venusShuttle[m];
+subject to marsShuttleRestriction {m in months}: sum {t in types} marsShipped [m, t] <= 1000 * marsShuttle[m];
 
 subject to firstMonthProduction   {t in types}: produced[1, t] = mercuryShipped[1, t] + venusShipped[1, t] + marsShipped[1, t] + leftOver[1, t];
 subject to generalMonthProduction {m in 2 .. 12, t in types}: produced[m, t] = mercuryShipped[m, t] + venusShipped[m, t] + marsShipped[m, t] + leftOver[m, t] - leftOver[m - 1, t];  
